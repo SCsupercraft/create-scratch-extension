@@ -7,6 +7,9 @@
     throw new Error('This extension only supports PenguinMod.');
   }
 
+  const vm = Scratch.vm;
+  const runtime = vm.runtime;
+
   class Extension {
     getInfo() {
       return {

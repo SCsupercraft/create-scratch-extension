@@ -5,6 +5,9 @@
     throw new Error('Sandboxed mode is not supported by this extension.');
   }
 
+  const vm = Scratch.vm;
+  const runtime = vm.runtime;
+
   class Extension implements Scratch.Extension {
     getInfo(): Scratch.Info {
       return {
