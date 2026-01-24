@@ -1,6 +1,6 @@
 {
   "name": "create-scratch-extension",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,10 +9,17 @@
   },
   "files": [
     "index.js",
-    "template-*",
+    "template-*/**/*",
     "dist"
   ],
-  "bin": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SCsupercraft/create-scratch-extension.git"
+  },
+  "homepage": "https://github.com/SCsupercraft/create-scratch-extension?tab=readme-ov-file#create-scratch-extension-",
+  "bin": {
+    "create-scratch-extension": "index.js"
+  },
   "engines": {
     "node": "^20.19.0 || >=22.12.0"
   },
