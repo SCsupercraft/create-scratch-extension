@@ -1,0 +1,34 @@
+{
+  "name": "turbowarp-extension",
+  "version": "1.0.0",
+  "description": "A TurboWarp extension template using typescript.",
+  "main": "dist/extension.js",
+  "scripts": {
+    "lint": "eslint ./src",
+    "lint:type": "tsc --noEmit -p ./tsconfig.json",
+    "fix": "eslint ./src --fix",
+    "watch": "webpack --watch",
+    "build": "webpack build",
+    "format": "prettier ./src -c -w",
+    "lint:format": "prettier ./src -c",
+    "update-types": "npm install @turbowarp/types@git+https://github.com/TurboWarp/types-tw.git#tw"
+  },
+  "author": "SCsupercraft",
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.3",
+    "@eslint/js": "^9.39.2",
+    "@turbowarp/types": "github:TurboWarp/types-tw#tw",
+    "@typescript-eslint/eslint-plugin": "^8.39.1",
+    "@typescript-eslint/parser": "^8.39.1",
+    "eslint": "^9.33.0",
+    "globals": "^17.1.0",
+    "prettier": "^3.6.2",
+    "raw-loader": "^4.0.2",
+    "terser-webpack-plugin": "^5.3.16",
+    "ts-loader": "^9.5.4",
+    "typescript": "^5.9.2",
+    "webpack": "^5.104.1",
+    "webpack-cli": "^6.0.1"
+  }
+}

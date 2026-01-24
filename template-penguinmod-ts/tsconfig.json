@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "sourceMap": false,
+    "module": "ESNext",
+    "removeComments": false,
+    "strict": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "types": [],
+    "baseUrl": ".",
+    "lib": ["ESNext", "DOM"],
+    "target": "ESNext",
+    "moduleResolution": "Node",
+    "outDir": "dist"
+  },
+  "include": [
+    "src/**/*",
+    "types/**/*",
+    "package.json",
+    "./node_modules/penguinmod-types/types/scratch-vm-extension.d.ts"
+  ]
+}

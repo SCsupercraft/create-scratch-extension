@@ -1,0 +1,19 @@
+{
+  "filename": "extension.js",
+  "meta": [
+    "Name: My Extension",
+    "ID: myExtension",
+    "Description: An extension made using the TurboWarp Extension Template. https://github.com/SCsupercraft/penguinmod-extension",
+    "By: SCsupercraft <https://github.com/SCsupercraft/>",
+    "License: MIT"
+  ],
+  "banner": [
+    "My Extension",
+    "Version 1.0.0",
+    "",
+    "An extension made using the TurboWarp Extension Template.",
+    "https://github.com/SCsupercraft/penguinmod-extension",
+    "",
+    "By SCsupercraft"
+  ]
+}
