@@ -20,4 +20,6 @@
   }
 
   Scratch.extensions.register(new Extension());
+
+  // eslint-disable-next-line no-undef
 })(Scratch);
