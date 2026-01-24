@@ -2,6 +2,8 @@
 
 A template for developing PenguinMod extensions using javascript.
 
+> Made using [create-scratch-extension](https://www.npmjs.com/package/create-scratch-extension)
+
 ## Details
 
 The entry file for the extension is located at `src/extension.js`.

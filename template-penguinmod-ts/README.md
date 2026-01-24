@@ -4,6 +4,8 @@ A template for developing PenguinMod extensions using typescript.
 
 Uses [penguinmod-types](https://github.com/SCsupercraft/types-pm) for types.
 
+> Made using [create-scratch-extension](https://www.npmjs.com/package/create-scratch-extension)
+
 ## Details
 
 The entry file for the extension is located at `src/extension.ts`.

@@ -4,6 +4,8 @@ A template for developing TurboWarp extensions using typescript.
 
 Uses [@turbowarp/types-tw](https://github.com/TurboWarp/types-tw) for types.
 
+> Made using [create-scratch-extension](https://www.npmjs.com/package/create-scratch-extension)
+
 ## Details
 
 The entry file for the extension is located at `src/extension.ts`.
