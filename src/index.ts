@@ -81,6 +81,11 @@ const FRAMEWORKS: Framework[] = [
         color: c.blue,
       },
       {
+        name: 'turbowarp-ts-js-enabled',
+        display: 'TypeScript (JavaScript Enabled)',
+        color: c.blue,
+      },
+      {
         name: 'turbowarp-js',
         display: 'JavaScript',
         color: c.yellow,
@@ -95,6 +100,11 @@ const FRAMEWORKS: Framework[] = [
       {
         name: 'penguinmod-ts',
         display: 'TypeScript',
+        color: c.blue,
+      },
+      {
+        name: 'penguinmod-ts-js-enabled',
+        display: 'TypeScript (JavaScript Enabled)',
         color: c.blue,
       },
       {
@@ -452,6 +462,10 @@ async function main() {
     process.exit(status ?? 0);
   }
 
+  const typescript = template.includes('-ts');
+  const javascriptEnabled = template.includes('-js-enabled');
+  if (javascriptEnabled) template = template.replaceAll('-js-enabled', '');
+
   // 5. Ask about immediate install and package manager
   let immediate = argImmediate;
   if (immediate === undefined) {
@@ -486,7 +500,9 @@ async function main() {
   };
 
   const files = fs.readdirSync(templateDir);
-  for (const file of files.filter((f) => f !== 'package.json')) {
+  for (const file of files.filter(
+    (f) => f !== 'package.json' && f !== 'tsconfig.json',
+  )) {
     write(file);
   }
 
@@ -497,6 +513,26 @@ async function main() {
   pkg.name = packageName;
 
   write('package.json', JSON.stringify(pkg, null, 2) + '\n');
+
+  if (typescript) {
+    const tsconfig = JSON.parse(
+      fs.readFileSync(path.join(templateDir, `tsconfig.json`), 'utf-8'),
+    );
+
+    if (javascriptEnabled) tsconfig.compilerOptions.allowJs = true;
+
+    write('tsconfig.json', JSON.stringify(tsconfig, null, 2) + '\n');
+
+    write(
+      'webpack.config.js',
+      fs
+        .readFileSync(path.join(root, 'webpack.config.js'), 'utf-8')
+        .replaceAll(
+          '/*TEMPLATE_RESOLVE*/',
+          javascriptEnabled ? "'.ts', '.js'" : "'.ts'",
+        ),
+    );
+  }
 
   let doneMessage = '';
   const cdProjectName = path.relative(cwd, root);

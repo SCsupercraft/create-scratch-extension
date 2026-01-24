@@ -57,7 +57,7 @@ const config = {
     ],
   },
   resolve: {
-    extensions: ['.ts'],
+    extensions: [/*TEMPLATE_RESOLVE*/],
   },
   optimization: {
     minimize: true,
