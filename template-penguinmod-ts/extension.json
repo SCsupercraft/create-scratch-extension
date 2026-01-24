@@ -3,7 +3,7 @@
   "meta": [
     "Name: My Extension",
     "ID: myExtension",
-    "Description: An extension made using the PenguinMod Extension Template. https://github.com/SCsupercraft/penguinmod-extension",
+    "Description: An extension made using create-scratch-extension. https://www.npmjs.com/package/create-scratch-extension",
     "By: SCsupercraft <https://github.com/SCsupercraft/>",
     "License: MIT"
   ],
@@ -11,8 +11,8 @@
     "My Extension",
     "Version 1.0.0",
     "",
-    "An extension made using the PenguinMod Extension Template.",
-    "https://github.com/SCsupercraft/penguinmod-extension",
+    "An extension made using create-scratch-extension.",
+    "https://www.npmjs.com/package/create-scratch-extension",
     "",
     "By SCsupercraft"
   ]
